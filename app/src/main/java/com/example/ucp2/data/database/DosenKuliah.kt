@@ -13,8 +13,8 @@ import com.example.ucp2.data.entity.MataKuliah
 @Database(entities = [Dosen::class,MataKuliah::class], version = 1, exportSchema = false)
 abstract class DosenKuliah : RoomDatabase(){
 
-    abstract fun mahasiswaDao(): DosenDao
-    abstract fun matakuliahDao(): MataKuliahDao
+    abstract fun DosenDao(): DosenDao
+    abstract fun MataKuliahDao(): MataKuliahDao
 
     companion object{
         // Memastikan bahwa nilai variabel Instance selalu sama di semua thread
