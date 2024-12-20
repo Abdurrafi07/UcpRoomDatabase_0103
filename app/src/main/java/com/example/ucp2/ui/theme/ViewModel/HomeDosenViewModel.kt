@@ -15,7 +15,7 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 
 class HomeDosenViewModel(
-    private val repositoryDosen: LocalRepositoryDosen
+    private val repositoryDosen: RepositoryDosen
 ): ViewModel() {
     val homeUiState: StateFlow<HomeUiState> = repositoryDosen.getAllDosen()
         .filterNotNull()
