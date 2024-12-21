@@ -17,7 +17,7 @@ fun TopAppBar(
     showBackButton: Boolean = true,
     judul: String,
     modifier: Modifier = Modifier,
-    backgroundColor: Color = Color(0xFF6200EA), // Primary background color
+    backgroundColor:Color = Color(0xFF4CAF50), // Primary background color
     contentColor: Color = Color.White // Text and icon color
 ) {
     Box(
