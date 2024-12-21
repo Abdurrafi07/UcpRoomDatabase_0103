@@ -14,13 +14,13 @@ import kotlinx.coroutines.flow.onStart
 import kotlinx.coroutines.flow.stateIn
 
 class HomeMataKuliahViewModel(
-    private val repositoryMhs: RepositoryMataKuliah
+    private val repositoryMataKuliah: RepositoryMataKuliah
 ) : ViewModel(){
-    val HomeUiStateMataKuliah: StateFlow<HomeUiStateMataKuliah> = repositoryMhs.getAllMatakuliah()
+    val HomeUiStateMataKuliah: StateFlow<HomeUiStateMataKuliah> = repositoryMataKuliah.getAllMatakuliah()
         .filterNotNull()
         .map {
             HomeUiStateMataKuliah(
-                listMhs = it.toList(),
+                listKuliah = it.toList(),
                 isLoading = false,
             )
         }
@@ -47,7 +47,7 @@ class HomeMataKuliahViewModel(
 }
 
 data class HomeUiStateMataKuliah(
-    val listMhs: List<MataKuliah> = listOf(),
+    val listKuliah: List<MataKuliah> = listOf(),
     val isLoading: Boolean = false,
     val isError: Boolean = false,
     val errorMessage: String = ""
