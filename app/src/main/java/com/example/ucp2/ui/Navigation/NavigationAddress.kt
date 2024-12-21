@@ -12,8 +12,16 @@ object DestinasiHomeDosen : NavigationAddress {
     override val route: String = "HomeDosen"
 }
 
+object DestinasiDosenInsert : NavigationAddress {
+    override val route = "InsertDosen"
+}
+
 object DestinasiHomeMataKuliah : NavigationAddress{
     override val route: String = "HomeMataKuliah"
+}
+
+object DestinasiInsertMataKuliah : NavigationAddress {
+    override val route = "InsertMataKuliah"
 }
 
 object DestinasiDetailMataKuliah : NavigationAddress{
