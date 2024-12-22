@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/6ae5bfa0-f47e-4b42-9d46-acd3684dce03)Tampilah Home Splash / Halaman Awal
+Tampilah Home Splash / Halaman Awal
 ![image](https://github.com/user-attachments/assets/bea426aa-33c9-49b3-872b-ea72c62bad04)
 
 Tampilan Home Dosen / Daftar Dosen
@@ -24,6 +24,6 @@ Tampilan Daftar Matakuliah setelah hapus data
 Tampilan Edit Matakuliah
 ![image](https://github.com/user-attachments/assets/84646287-cb61-4020-b564-f1b239c3db72)
 ![image](https://github.com/user-attachments/assets/6cdc1b1b-f319-438c-bf14-f6544f90f319)
-Tampilan Detai setelah Edit
+Tampilan Detail setelah Edit
 ![image](https://github.com/user-attachments/assets/24128ab7-af7b-48f7-86bf-bd4a67322e11)
 
