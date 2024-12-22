@@ -117,7 +117,7 @@ fun BodyDetailMatakuliah(
                             onDeleteClick()
                         },
                         onDeleteCancel = { deleteConfirmationRequired = false },
-                        modifier = Modifier.padding(8.dp)
+                        modifier = Modifier.padding(8.dp),
                     )
                 }
             }
@@ -209,7 +209,13 @@ private fun DeleteConfirmationDialog(
             }
         },
         confirmButton = {
-            TextButton(onClick = onDeleteConfirm) {
+            TextButton(
+                onClick = onDeleteConfirm,
+                colors = ButtonDefaults.textButtonColors(
+                    containerColor = MuhammadiyahGreen, // Mengatur warna kotak tombol menjadi Muhammadiyah Green
+                    contentColor = Color.White // Mengatur warna teks tombol menjadi putih untuk kontras
+                    )
+                ) {
                 Text(text = "Yes")
             }
         }

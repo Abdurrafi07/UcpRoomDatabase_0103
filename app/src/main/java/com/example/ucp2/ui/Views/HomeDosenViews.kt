@@ -70,11 +70,13 @@ fun HomeDosenViews(
             FloatingActionButton(
                 onClick = onAddDosen,
                 shape = MaterialTheme.shapes.medium,
-                modifier = Modifier.padding(16.dp)
+                modifier = Modifier.padding(16.dp),
+                containerColor = MuhammadiyahGreen // Muhammadiyah Green for the button
             ) {
                 Icon(
                     imageVector = Icons.Default.Add,
                     contentDescription = "Tambah Dosen",
+                    tint = Color.White // White icon for better contrast
                 )
             }
         }
