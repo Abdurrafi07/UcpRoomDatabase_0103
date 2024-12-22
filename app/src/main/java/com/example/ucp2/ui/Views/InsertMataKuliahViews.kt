@@ -1,5 +1,6 @@
 package com.example.ucp2.ui.Views
 
+import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -8,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.material.icons.Icons
@@ -147,7 +149,7 @@ fun FormMatakuliah(
     modifier: Modifier = Modifier,
     listDosen: List<Dosen>
 ) {
-    val sks = listOf("1", "2", "3", "4", "5", "6")
+    val sks = listOf("1", "2", "3", "4", "5", "6", "7", "8")
     val jenis = listOf("Wajib", "Peminatan")
     val namaDosenList = listDosen.map { it.nama }
     val semesterOptions = listOf("Ganjil", "Genap") // Menambahkan pilihan semester
@@ -162,7 +164,7 @@ fun FormMatakuliah(
             onValueChange = {
                 onValueChange(matakuliahEvent.copy(kode = it))
             },
-            label = { Text("Kode") },
+            label = { Text("Kode Matakuliah") },
             isError = errorState.kode != null,
             placeholder = { Text("Masukkan Kode Matakuliah") },
             keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
@@ -181,7 +183,7 @@ fun FormMatakuliah(
             onValueChange = {
                 onValueChange(matakuliahEvent.copy(nama = it))
             },
-            label = { Text("Nama") },
+            label = { Text("Nama Matakuliah") },
             isError = errorState.nama != null,
             placeholder = { Text("Masukkan Nama Matakuliah") },
             leadingIcon = {
@@ -197,7 +199,9 @@ fun FormMatakuliah(
 
         Text(text = "SKS")
         Row(
-            modifier = Modifier.fillMaxWidth(),
+            modifier = Modifier
+                .fillMaxWidth()
+                .horizontalScroll(rememberScrollState()),
             horizontalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             sks.forEach { sksOption ->
